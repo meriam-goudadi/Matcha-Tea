@@ -1,0 +1,256 @@
+/* Parti Index */
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./Assets/Poppins-Black.ttf);
+}
+
+  
+
+
+@media (max-width: 450px) {
+  .crossbar {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .crossbar li:nth-child(1) {
+    display: none;
+  }
+  .crossbar li:nth-child(3) {
+    display: none;
+  }
+  
+
+  .sell {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  p {
+    text-align: center;
+    overflow-wrap: normal;
+  }
+
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .Compte {
+    margin: 10px;
+    position: relative;
+    left: 1.8em;
+  }
+
+
+  
+}
+
+@media (min-width: 451px) {
+  .crossbar li:nth-child(4) {
+    display: none;
+
+}
+}
+.one {
+  background-color: #86a788;
+  padding: 2em;
+}
+
+.crossbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.crossbar li:nth-child(1) {
+  
+}
+
+
+.crossbar li:nth-child(2) {
+  font-size: 2em;
+}
+
+
+.sidebar {
+  background-color: #ffcfcf;
+  width: 6em;
+}
+.side {
+  display: flex;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 2.3em;
+}
+
+
+.best-seller p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+p {
+  margin: 0.5em;
+}
+.best-seller {
+  background-color: #fffdec;
+}
+
+.sell {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  background-color: #86a788;
+}
+
+main,
+.best-seller {
+  width: 100%;
+  
+}
+
+.sell {
+  display: flex;
+  margin: 2em;
+  padding: 2em;
+  align-items: center;
+}
+.footer1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-left,
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.footer-right,
+.adress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left,
+.footer-right {
+  align-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #fffdec;
+  color: #86a788;
+  border: none;
+}
+
+.crossbar li {
+  color: #fffdec;
+}
+
+.side li {
+  color: #86a788;
+}
+
+.best-seller p {
+  color: #86a788;
+}
+
+article {
+  color: #86a788;
+}
+
+.footer-left,
+.footer-right {
+  color: #fffdec;
+}
+.panier {
+display: flex;
+justify-content: center;
+margin: 5px;
+padding: 2.5em;
+}
+
+.panier button {
+  padding: 1.5em;
+  border: none;
+  background-color: #86a788;
+  color: #fffdec;
+  border-radius: 5px;
+}
+.main1, .main2 {
+  display: flex;
+}
+
+
+/* partie compte */
+
+ .titre{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+form {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  position: relative;
+}
+
+.Compte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a:visited {
+  color:#86a788;
+  text-decoration: NONE;
+}
+
+
+.crossbar button {
+  padding: 1.5em;
+  border: none;
+  background-color: #fffdec;
+  color: #86a788;
+  border-radius: 5px;
+}
+
+.form1 button {
+  padding: 1.5em;
+  border: none;
+  background-color: #86a788;
+  color: #fffdec;
+  border-radius: 5px;
+}
+li a:visited {
+  color:#fffdec;
+  text-decoration: none;
+  list-style-type: none;
+  list-style: none;
+}

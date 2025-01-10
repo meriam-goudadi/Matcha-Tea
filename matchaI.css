@@ -1,0 +1,599 @@
+
+/* RESET pour éviter les styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Styles généraux */
+body {
+    font-family:'Poppins';
+    background-image: url("images/Matcha\ aesthetic\ phone\ wallpaper.jpg");
+    background-size: 100%; 
+    background-position: center; 
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+   /* From https://css.glass */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.44);
+}
+
+/*....................................*/
+/* Header avec navbar */
+header {
+    background-color: #86A788;
+    padding: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+}
+.compte{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.title h2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'poppins';
+    font-size:1.5rem;
+    color: rgb(157, 21, 164);
+    padding: 2%;
+   
+}
+.compte img{
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    animation-delay:0.5s;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+    align-items:center;
+}
+/* Effet au survol */
+.compte img:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+}
+
+/* Effet au clic */
+.compte img:active {
+    transform: scale(1.3); 
+    transition: transform 0.1s ease;
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'poppins';
+    text-align: center;  
+    font-size: 2em; 
+    font-weight: 500; 
+    text-align: center;
+    color: #e7eae2; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    text-shadow: 3px 3px 8px rgba(205, 193, 193, 0.2); /
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out
+                
+}
+/*............................................................*/
+
+/* Styles pour la navbar */
+.navbar {
+   
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 150px; 
+    height: 100%; 
+    background-color: #cf86b5;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid #fff; 
+}
+
+.navbar ul {
+   
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px; /* Espace au-dessus des éléments de la liste */
+}
+
+.navbar li {
+    margin: 40px 30px; /* Espacement entre les éléments */
+   
+}
+
+.navbar a {
+    gap: 40px;
+    display: block;
+    color: #FFE2E2;
+    text-decoration: none;
+    font-size: 18px;
+    font-family:'poppins';
+    gap: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    writing-mode: vertical-rl;
+    align-items: center;
+
+}
+
+/* Effet au survol */
+.navbar a:hover {
+    background-color: #e6bdca;
+    color: #111;
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 5px;
+    background-color: #413d3d;
+}
+/* Contenu principal (ajouté un padding-left pour ne pas être caché par la navbar) */
+section {
+    padding: 20px;
+    margin-left: 220px; /* La marge est égale à la largeur de la navbar pour que le contenu ne soit pas sous elle */
+}
+/*................................................................*/
+/*.....................CSS DE LA PAGE HISTOIRE.......................*/
+
+
+.histoire h1  {
+    
+    justify-content: center;
+    text-align: center;
+    color: #111b8b;
+    font-size: 2em;
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+   
+}
+
+.histoire  p{
+    color:rgb(9, 2, 50);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    animation: fadeIn 2s ease-in-out;
+}
+/*...................*/
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+
+}
+.item-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.valeurs h1  {
+    display:flex;
+    width: 100%;
+    height: auto;
+   border: #ddecde;
+   border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    color: #111b8b;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+   
+}
+.valeurs p {
+    width: 100%;
+    height: 100%;
+    background-color: #ddecde;
+    box-sizing: content-box;
+    border-radius: 5px;
+    box-shadow: gray;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+
+}
+.valeurs p:hover {
+    transform: translateX(-50px)
+}
+
+
+
+ .histoire ul li {
+    text-align: justify;
+    height: 50%;
+    width: 30%;
+    display:grid;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #86A788;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; /* Applique la transition sur le transform */
+}
+
+/* Quand l'élément est survolé */
+.histoire li:hover {
+    transform: translateX(100px); /* Déplace l'élément vers la droite */
+
+
+}
+
+
+
+/*............................................................................................................*/
+/* ........................css de la page vente( h1, la grille des images)........................;*/
+/* Mosaïque des produits */
+.produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.produit {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.produit:hover {
+    transform: scale(1.05);
+}
+
+.produit img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+iframe {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+.title h1{
+    margin-top: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: #111b8b;
+    background-color: #ddd;
+   
+}
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4caf50; 
+    margin-top: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    color: #5f5d68;
+    margin-top: 10px;
+}
+
+.prix {
+   
+    color: #f60;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+/*............................................................................................................*/
+
+footer {
+    background-color:#86A788;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 40px;
+    text-decoration-style: none;
+    list-style-type:none;
+    display: flex;
+    justify-content:space-around; 
+
+}
+ 
+footer p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'poppins';
+}
+
+
+
+.information li {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+    gap: 30px;
+    list-style-type: none;
+    text-decoration: solid;
+    color: #0e5421;
+    font-family: 'poppins';
+    font-style:solid;
+}
+
+
+/* formulaire */
+footer form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+form::placeholder {
+    color: #dfc7d1;
+}
+
+/* Bouton Submit */
+.submit-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: hsl(152, 58%, 86%);
+    color: rgb(57, 4, 65);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #cf86b5;
+}
+.information li a{
+    text-decoration: none;
+    color: #555; 
+    font-family: 'poppins';
+    font-size: large;
+
+}
+
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #d6a5cc; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    margin: 20px auto; 
+    font-family: 'poppins'; 
+    margin-left: 200px; 
+    animation-delay: 0.6s;
+    transition: transform 0.3s ease-in-out;
+    cursor:grab;
+    text-decoration: none;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.information:hover {
+    transform: scale(1.05);
+}
+
+
+
+.information h3 {
+    font-size: 1rem; 
+    color: #f1f5f2; 
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.information p {
+    font-size: 1rem; 
+    color: #555; 
+    margin: 5px 0;
+    text-align: center; 
+}
+
+.information img {
+    width: 50px; 
+    height: auto; 
+    display: block;
+    margin: 10px auto; 
+    border-radius: 50%;
+}
+
+.information p:last-of-type {
+    font-weight: bold; 
+    color: blue; 
+}
+
+/*....................................*/
+
+/*bas de page...........*/
+.bas-de-page p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:#710c56;
+    font-size: x-large;
+
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    /* Pour les grands écrans comme les tablettes et les petits écrans d'ordinateur */
+    .navbar {
+        padding: 10px 50px;
+    }
+
+    .nav ul {
+        gap: 15px;
+    }
+
+    .histoire h1 {
+        font-size: 1rem;
+    }
+
+    .box {
+        gap: 15px;
+    }
+
+    .item-box {
+        flex-direction: column;
+        justify-items: center;
+}
+.footer .information .histoire .box{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+}
+@media (max-width: 768px) {
+    /* Pour les tablettes et smartphones */
+    .navbar {
+        display:none;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .histoire h1 {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    /* Menu Burger - visible sur mobile */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav {
+        display: none; /* Masquer le menu sur mobile */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #cf86b5;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    /* Lorsque le menu burger est activé */
+    #menu-toggle:checked + .nav {
+        display: flex;
+    }
+
+    .compte img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+}
+@media (max-width: 480px) {
+    /* Pour les petits écrans (smartphones) */
+    .navbar {
+        display: none;
+    }
+
+    .nav a {
+        font-size: 16px;
+    }
+
+    .histoire h1 {
+        font-size: 1rem;
+    }
+
+    .box {
+        gap: 10px;
+    }
+
+    .item-box {
+        flex: 1 1 100%; /* Les éléments prennent toute la largeur */
+    }
+
+    .footer form textarea {
+        font-size: 14px;
+    }
+
+    .bas-de-page {
+        font-size: 14px;
+    }
+}
+
