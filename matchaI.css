@@ -87,7 +87,7 @@ h1{
     color: #e7eae2; 
     text-transform: uppercase; 
     letter-spacing: 5px; 
-    text-shadow: 3px 3px 8px rgba(205, 193, 193, 0.2); /
+    text-shadow: 3px 3px 8px rgba(205, 193, 193, 0.2); 
     margin-top: 20px;
     animation: fadeIn 2s ease-in-out
                 
