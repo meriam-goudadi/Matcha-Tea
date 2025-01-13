@@ -2,67 +2,219 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @font-face {
-        .poppins-light {
-            font-family: "Poppins", serif;
-            font-weight: 300;
-            font-style: normal;
-          };
+    font-family:'Poppins' url(../polices/Poppins.zip);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Partie header menu horizontal */
+.menu-horizontal {
+    background-color: #86a788;
+    padding: 10px;
+}
+.menu-horizontal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu-horizontal ul li {
+    margin: 0 15px;
+}
+.menu-horizontal ul li a {
+    color: #fffdec;
+    text-decoration: none;
+    font-size: 15px;
+    justify-content: space-between;
+    padding-left: 70px;
+    font-family: 'Poppins';
+}
+
+.menu-horizontal-ap {
+    background-color: #86a788;
+    padding: 10px;
+}
+.menu-horizontal-ap ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu-horizontal-ap ul li {
+    margin: 0 15px;
+}
+.menu-horizontal-ap ul li a {
+    color: #fffdec;
+    text-decoration: none;
+    font-size: 15px;
+    justify-content: space-between;
+    padding-left: 70px;
+}
+/* Conteneur principal */
+.conteneur-principal {
+    display: flex;
+    flex: 1;
+}
+.conteneur-principal-ap {
+    margin-left: 100px;
+    min-height: 100vh; /* prend tte la hauteur de la vue */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    /* margin-left: 269px; */ /* largeur de la barre de menu verticale */
+    /* padding: 20px; */ /* espacement autour du contenu */
+    box-sizing: border-box;
+}
+/* Menu Vertical */
+.menu-vertical {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffcfcf;
+    width: 100px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.menu-vertical ul {
+    /* justify-content: center; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-vertical ul li {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.menu-vertical ul li a {
+    color: #86a788;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+}
+.menu-vertical ul li a:hover {
+    background-color: rgba(134, 167, 136, 0.1);
+}
+.menu-vertical a {
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-between;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transition: background-color 0.3s;
+}
+.menu-horizontal a img {
+    width: 30px;
+}
+/* menu vertical page "à propos" */
+.menu-vertical-ap {
+    width: 100px;
+    height: 100vh;
+    background-color: #ffcfcf;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.menu-horizontal-ap a img {
+    width: 30px;
+}
+.menu-vertical-ap a {
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 50px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transition: background-color 0.3s;
+}
+.menu-vertical-ap ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-vertical-ap ul li {
+    margin-bottom: 15px;
+}
+.menu-vertical-ap ul li a {
+    color: #86a788;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 35px;
+}
+.menu-vertical-ap ul li a:hover {
+    background-color: rgba(134, 167, 136, 0.1);
+}
+.contenu-principal {
+    flex: 1;
+}
+.contenu-principal-ap {
+    flex: 1; /* prend tout l'espace dispo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre verticalement */
+    align-items: center; /* centre horizontalement */
+    box-sizing: border-box;
+}
+/* Responsive Design Menus */
+@media (max-width: 768px) {
+    .conteneur-principal {
+        flex-direction: column;
+    }
+    .menu-vertical {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        border-bottom: 1px solid #86a788;
+    }
+    .menu-vertical ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-vertical ul li {
+        margin: 0;
     }
 }
-/* Partie Header */
-.one {
-    display: flex;
-    background-color: #86a788;
-    text-align: center;
-    padding: 10px;
-}
-.one-apropos {
-    background-color: rgba(115, 172, 153, 0.5);
-    text-align: center;
-    padding: 10px;
-    margin-bottom: auto;
-    overflow-x: hidden;
-}
-.menu-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    gap: 20px;
-}
-.menu-logo button {
-    padding: 1.5em;
-    border: none;
-    background-color: #fffdec;
-    color: #86a788;
-    border-radius: 5px;
-  }
 
 /* Section "à propos" */
 .body {
+    font-family:'Poppins';
+    background-size: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('images/rose-vert.jpg');
+    background-image: url('../Matcha-Tea/images/rose-vert.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 .apropos {
-    flex: 1;
+    /* flex: 1; */
     padding: 20px;
     position: relative;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fffdec;
     text-align: center;
+    box-sizing: border-box;
 }
 .background-image {
     position: absolute;
@@ -70,7 +222,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/rose-vert.jpg');
+    background-image: url('../Matcha-Tea/images/rose-vert.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -84,17 +236,32 @@
 .grid-conteneur {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
     width: 80%;
     max-width: 1200px;
-    margin: 60px auto 30px auto; /* modif */
+    margin: auto;
+    /* margin-right: 0; */
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* margin-left: 150px; */
+    /* margin: 60px auto 30px auto; */ /* modif */
 }
 .grid-item {
+    width: 350px;
+    height: 250px;
     background: rgba(115, 172, 153, 0.5);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .grid-item h3 {
     margin-top: 0;
@@ -103,27 +270,50 @@
 .grid-item p {
     color: #fffdec;
 }
+.grid-item img {
+    width: 90px;
+    height: 130px;
+    margin-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 5px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
 /* Responsive a propos top page */
 @media (max-width: 768px) {
+    .conteneur-principal {
+        margin-left: 0;
+    }
     .grid-conteneur {
         grid-template-columns: 1fr;
     }
     .grid-item {
         padding: 15px;
     }
+    .footer {
+        padding: 5px;
+        font-size: 14px;
+    }
 }
 /* Engagements */
 .footer {
-    grid-row: 2;
+    /* grid-row: 2; */
+    /* width: auto; */
+    width: 100%;
     background-color: rgba(115, 172, 153, 0.5);
     text-align: center;
     padding: 10px;
     margin-top: auto; /* Place le footer en bas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: -50px; */
 }
 
 .engagements h2 {
     margin-bottom: 10px;
     color: #fffdec;
+    font-size: 17px;
 }
 
 .engagements p {
@@ -135,8 +325,8 @@
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 15px;
-    background-color: #86a788;
-    color: #fffdec;
+    background-color: #fffdec;
+    color: #86a788;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -300,17 +490,15 @@
     color: #e0e0d5;
 }
 .socials-contact p {
-    margin-bottom: 20px;
     line-height: 1.6;
     display: flex;
     justify-content: center;
-    margin-top: 0;
 }
 .socials-contact .socials {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    /* margin-top: 10px; */
     text-decoration: none;
     gap: 10px;
 }
