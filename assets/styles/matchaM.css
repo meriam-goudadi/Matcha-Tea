@@ -490,17 +490,15 @@
     color: #e0e0d5;
 }
 .socials-contact p {
-    margin-bottom: 20px;
     line-height: 1.6;
     display: flex;
     justify-content: center;
-    margin-top: 0;
 }
 .socials-contact .socials {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     text-decoration: none;
     gap: 10px;
 }
